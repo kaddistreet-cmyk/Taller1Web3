@@ -1,0 +1,48 @@
+<section class="inicio">
+    <div class="contenedor contenido-inicio">
+        <div class="texto-inicio">
+            <span class="etiqueta">Estampados personalizados</span>
+            <h2>Prendas que cuentan tu historia</h2>
+            <p>
+                En Tailor Shop combinamos creatividad, calidad textil y diseños únicos
+                para crear prendas que representan tu estilo.
+            </p>
+
+            <div class="acciones-inicio">
+                <a class="boton-principal" href="/catalogo">Ver catálogo</a>
+                <a class="boton-secundario" href="/contacto">Solicitar información</a>
+            </div>
+        </div>
+
+        <div class="visual-inicio">
+            <img class="imagen-inicio" [src]="imagenInicio" alt="Diseño textil de Tailor Shop" />
+        </div>
+    </div>
+</section>
+
+<section class="contenedor servicios">
+    <div class="encabezado-servicios">
+        <div>
+            <span class="etiqueta">Nuestros servicios</span>
+            <h2 class="titulo-seccion">Lo que ofrecemos</h2>
+        </div>
+    </div>
+
+    <div class="lista-servicios">
+        @for (servicio of servicios; track servicio.id) {
+        <article>
+            <div class="cabecera-servicio">
+                <span>0{{ servicio.id }}</span>
+                <h3>{{ servicio.nombre }}</h3>
+            </div>
+            <p>{{ servicio.descripcion }}</p>
+
+            @if (servicio.imagen) {
+            <div class="imagenes-equipos">
+                <img [src]="servicio.imagen" [alt]="servicio.nombre" />
+            </div>
+            }
+        </article>
+        }
+    </div>
+</section>

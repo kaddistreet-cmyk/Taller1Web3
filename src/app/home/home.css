@@ -1,0 +1,272 @@
+.inicio {
+  position: relative;
+  overflow: hidden;
+  padding: 45px 0;
+  color: #5b2d1c;
+  background: linear-gradient(120deg, #f8eee5, #fffaf5);
+  border-bottom: 1px solid #ead4c1;
+}
+
+.inicio::after {
+  position: absolute;
+  right: -120px;
+  bottom: -170px;
+  width: 380px;
+  height: 380px;
+  background-color: rgba(185, 103, 63, 0.1);
+  border-radius: 50%;
+  content: "";
+}
+
+.contenido-inicio {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 65px;
+  min-height: 410px;
+}
+
+.texto-inicio {
+  flex: 1;
+}
+
+.inicio h2 {
+  max-width: 650px;
+  margin-bottom: 16px;
+  font-size: 52px;
+  line-height: 1.08;
+}
+
+.inicio p {
+  max-width: 520px;
+  color: #6d5144;
+  font-size: 18px;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #b9673f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.acciones-inicio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.acciones-inicio a,
+.contenido-llamada a {
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-principal {
+  color: #ffffff;
+  background-color: #7a3e24;
+}
+
+.boton-secundario {
+  color: #7a3e24;
+  background-color: transparent;
+  border: 1px solid #b98e75;
+}
+
+.acciones-inicio a:hover,
+.contenido-llamada a:hover {
+  transform: translateY(-2px);
+}
+
+.beneficios-inicio {
+  display: flex;
+  gap: 26px;
+  margin-top: 32px;
+}
+
+.beneficios-inicio p {
+  display: grid;
+  font-size: 15px;
+}
+
+.beneficios-inicio span {
+  color: #8a756a;
+  font-size: 13px;
+}
+
+.visual-inicio {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.imagen-inicio {
+  width: 390px;
+  height: 300px;
+  object-fit: cover;
+  background-color: #ffffff;
+  border: 1px solid #ead4c1;
+  border-radius: 22px;
+  box-shadow: 0 18px 35px rgba(91, 45, 28, 0.18);
+}
+
+.sello-inicio {
+  position: absolute;
+  right: -18px;
+  bottom: 22px;
+  z-index: 1;
+  padding: 10px 14px;
+  color: #ffffff;
+  background-color: #7a3e24;
+  border-radius: 8px;
+  box-shadow: 0 7px 16px rgba(91, 45, 28, 0.2);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.encabezado-servicios {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 26px;
+}
+
+.encabezado-servicios .titulo-seccion {
+  margin-bottom: 0;
+}
+
+.encabezado-servicios > p {
+  max-width: 440px;
+  color: #78665d;
+}
+
+.lista-servicios {
+  display: flex;
+  gap: 22px;
+}
+
+.lista-servicios article {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d6b99d;
+  border-radius: 12px;
+  box-shadow: 0 7px 18px rgba(91, 45, 28, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lista-servicios article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 11px 24px rgba(91, 45, 28, 0.13);
+}
+
+.cabecera-servicio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cabecera-servicio span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: #ffffff;
+  background-color: #b9673f;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cabecera-servicio h3 {
+  color: #7a3e24;
+}
+
+.imagenes-equipos {
+  margin-top: 15px;
+}
+
+.imagenes-equipos img {
+  width: 100%;
+  height: 155px;
+  padding: 8px;
+  object-fit: contain;
+  background-color: #fffaf5;
+  border-radius: 8px;
+}
+
+.llamada-inicio {
+  color: #ffffff;
+  background: linear-gradient(135deg, #6b321d, #8e4b2d);
+}
+
+.contenido-llamada {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.contenido-llamada .etiqueta {
+  color: #f3c7aa;
+}
+
+.contenido-llamada h2 {
+  margin-bottom: 5px;
+}
+
+.contenido-llamada a {
+  flex-shrink: 0;
+  color: #7a3e24;
+  background-color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .contenido-inicio,
+  .lista-servicios,
+  .contenido-llamada {
+    flex-direction: column;
+  }
+
+  .contenido-inicio {
+    text-align: center;
+  }
+
+  .acciones-inicio,
+  .beneficios-inicio {
+    justify-content: center;
+  }
+
+  .imagen-inicio {
+    width: min(340px, 100%);
+    height: 240px;
+  }
+
+  .inicio h2 {
+    font-size: 39px;
+  }
+
+  .encabezado-servicios {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contenido-llamada {
+    align-items: start;
+  }
+}
