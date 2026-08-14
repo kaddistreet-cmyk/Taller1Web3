@@ -1,0 +1,10 @@
+<div class="heroes-grid">
+
+    @for (heroe of heroes(); track heroe.id) {
+    <div class="heroe-tarjeta">
+        <img [src]="heroe.images.md" [alt]="heroe.name">
+        <p>{{heroe.name}}</p>
+    </div>
+    }
+
+</div>
