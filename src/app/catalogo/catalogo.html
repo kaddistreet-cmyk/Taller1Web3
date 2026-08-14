@@ -1,0 +1,87 @@
+<section class="catalogo contenedor">
+  <div class="encabezado-catalogo">
+    <div>
+      <span class="etiqueta">Elige tu diseño</span>
+      <h2 class="titulo-seccion">Catálogo de estampados</h2>
+      <p>
+        Encuentra tu personaje favorito y personaliza la talla y el color de tu prenda.
+      </p>
+    </div>
+
+    @if (catalogo().length > 0) {
+      <div class="resumen-catalogo">
+        <strong>{{ catalogo().length }}</strong>
+        <span>diseños disponibles</span>
+      </div>
+    }
+  </div>
+
+  <div class="guia-compra">
+    <p><span>1</span><strong>Elige</strong> tu personaje</p>
+    <p><span>2</span><strong>Selecciona</strong> talla y color</p>
+    <p><span>3</span><strong>Agrega</strong> al carrito</p>
+  </div>
+
+  @if (catalogo().length > 0) {
+    <div class="lista-personajes">
+      @for (heroe of catalogo(); track heroe.id) {
+        <article class="personaje">
+          <div class="imagen-personaje">
+            <img [src]="heroe.images.md" [alt]="heroe.name" />
+            <span>Personalizable</span>
+          </div>
+
+          <div class="informacion-personaje">
+            <h3>{{ heroe.name }}</h3>
+
+            <div class="datos-personaje">
+              <p>
+                <strong>Poderes:</strong>
+                Inteligencia {{ heroe.powerstats.intelligence }},
+                fuerza {{ heroe.powerstats.strength }} y
+                velocidad {{ heroe.powerstats.speed }}.
+              </p>
+              <p>
+                <strong>Biografía:</strong>
+                {{ heroe.biography.fullName || 'Nombre real no disponible' }},
+                publicado por {{ heroe.biography.publisher || 'editorial desconocida' }}.
+              </p>
+              <p><strong>Ocupación:</strong> {{ heroe.work.occupation }}</p>
+            </div>
+
+            <div class="opciones-compra">
+              <div class="selectores">
+                <label>
+                  Talla
+                  <select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+                </label>
+
+                <label>
+                  Color de tela
+                  <select>
+                    <option value="rojo">Rojo</option>
+                    <option value="amarillo">Amarillo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="negro">Negro</option>
+                    <option value="purpura">Púrpura</option>
+                  </select>
+                </label>
+              </div>
+
+              <button type="button">Agregar al carrito</button>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  } @else {
+    <div class="estado-carga">Cargando diseños disponibles...</div>
+  }
+</section>

@@ -1,0 +1,247 @@
+.catalogo {
+  text-align: left;
+}
+
+.encabezado-catalogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 24px;
+  padding: 34px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6b321d, #8e4b2d);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(91, 45, 28, 0.16);
+}
+
+.encabezado-catalogo .titulo-seccion {
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.encabezado-catalogo p {
+  max-width: 680px;
+  color: #f3ddd0;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #f3c7aa;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.resumen-catalogo {
+  display: grid;
+  min-width: 150px;
+  padding: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.resumen-catalogo strong {
+  font-size: 28px;
+}
+
+.resumen-catalogo span {
+  color: #f3ddd0;
+  font-size: 13px;
+}
+
+.guia-compra {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.guia-compra p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 15px;
+  color: #6d5b52;
+  background-color: #ffffff;
+  border: 1px solid #ead4c1;
+  border-radius: 9px;
+}
+
+.guia-compra span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  background-color: #b9673f;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.lista-personajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 26px;
+}
+
+.personaje {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #d6b99d;
+  border-radius: 14px;
+  box-shadow: 0 7px 20px rgba(91, 45, 28, 0.09);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.personaje:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(91, 45, 28, 0.15);
+}
+
+.imagen-personaje {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen-personaje img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.personaje:hover .imagen-personaje img {
+  transform: scale(1.03);
+}
+
+.imagen-personaje span {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 9px;
+  color: #ffffff;
+  background-color: rgba(91, 45, 28, 0.9);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.informacion-personaje {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.informacion-personaje h3 {
+  margin-bottom: 14px;
+  color: #7a3e24;
+  font-size: 24px;
+}
+
+.datos-personaje {
+  display: grid;
+  gap: 9px;
+  padding: 14px;
+  background-color: #fffaf5;
+  border-radius: 8px;
+}
+
+.datos-personaje p {
+  color: #574840;
+  font-size: 14px;
+}
+
+.opciones-compra {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.selectores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.selectores label {
+  display: grid;
+  gap: 5px;
+  color: #7a3e24;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.selectores select {
+  width: 100%;
+  padding: 9px;
+  color: #3d302a;
+  background-color: #fffaf5;
+  border: 1px solid #bd9675;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.selectores select:focus {
+  border-color: #7a3e24;
+  box-shadow: 0 0 0 3px rgba(185, 103, 63, 0.14);
+}
+
+.opciones-compra button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px;
+  color: #ffffff;
+  background-color: #7a3e24;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.opciones-compra button:hover {
+  background-color: #5f2d1b;
+  transform: translateY(-1px);
+}
+
+.estado-carga {
+  padding: 45px;
+  color: #7a3e24;
+  background-color: #ffffff;
+  border: 1px dashed #bd9675;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .encabezado-catalogo {
+    align-items: start;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .resumen-catalogo {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .guia-compra {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .selectores {
+    grid-template-columns: 1fr;
+  }
+}
