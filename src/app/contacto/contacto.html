@@ -1,0 +1,69 @@
+<section class="contacto contenedor">
+  <div class="informacion-contacto">
+    <span class="etiqueta">Mantente informado</span>
+    <h2 class="titulo-seccion">Suscríbete</h2>
+    <p>Recibe novedades sobre nuevos estampados, diseños y promociones.</p>
+  </div>
+
+  <div class="contenido-contacto">
+    <aside class="beneficios">
+      <span class="etiqueta">Tailor Shop</span>
+      <h3>Ideas y promociones para tu próxima prenda</h3>
+      <p>Al suscribirte podrás conocer nuestras novedades de manera sencilla.</p>
+
+      <ul>
+        <li>Nuevos diseños disponibles</li>
+        <li>Promociones de temporada</li>
+        <li>Ideas para personalizar prendas</li>
+      </ul>
+    </aside>
+
+    <form [formGroup]="formularioSuscripcion" (ngSubmit)="suscribirse()">
+      <div class="encabezado-formulario">
+        <h3>Formulario de suscripción</h3>
+        <p>Completa tus datos para recibir novedades.</p>
+      </div>
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input
+          id="nombre"
+          type="text"
+          formControlName="nombre"
+          maxlength="30"
+          placeholder="Tu nombre"
+          autocomplete="name"
+          required
+        />
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="correo@ejemplo.com"
+          autocomplete="email"
+          required
+        />
+      </div>
+
+      <div class="campo">
+        <label for="telefono">Teléfono</label>
+        <input
+          id="telefono"
+          type="tel"
+          formControlName="telefono"
+          maxlength="10"
+          placeholder="0999999999"
+          autocomplete="tel"
+          required
+        />
+      </div>
+
+      <button type="submit">Suscribirme</button>
+      <small>No compartiremos tus datos con otras personas.</small>
+    </form>
+  </div>
+</section>
