@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #3d302a;
+  background-color: #fcf8f4;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+select {
+  font: inherit;
+}
+
+button,
+select,
+input {
+  outline-color: #b9673f;
+}
+
+.contenedor {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  padding: 55px 24px;
+}
+
+.titulo-seccion {
+  margin-bottom: 14px;
+  color: #7a3e24;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.descripcion-seccion {
+  max-width: 700px;
+  margin-bottom: 28px;
+  color: #6d5b52;
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 38px 18px;
+  }
+
+  .titulo-seccion {
+    font-size: 27px;
+  }
+}
