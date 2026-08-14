@@ -1,0 +1,46 @@
+<section class="nosotros">
+  <div class="contenedor">
+    <div class="encabezado-nosotros">
+      <span class="etiqueta">Quiénes somos</span>
+      <h2 class="titulo-seccion">Sobre Tailor Shop</h2>
+      <p class="descripcion-seccion">
+        Somos un negocio textil dedicado a crear prendas y estampados personalizados
+        que representan el estilo de cada cliente.
+      </p>
+    </div>
+
+    <div class="compromiso">
+      <div>
+        <span class="etiqueta">Nuestro compromiso</span>
+        <h3>Convertimos tus ideas en prendas únicas</h3>
+        <p>
+          Cuidamos cada detalle del diseño, la tela y el estampado para entregar
+          productos cómodos, creativos y de buena calidad.
+        </p>
+      </div>
+
+      <div class="caracteristicas">
+        <p><strong>Diseños personalizados</strong><span>Adaptados a tu estilo.</span></p>
+        <p><strong>Trabajo responsable</strong><span>Atención en cada detalle.</span></p>
+        <p><strong>Calidad textil</strong><span>Prendas cómodas y duraderas.</span></p>
+      </div>
+    </div>
+
+    <h3 class="subtitulo-valores">Lo que nos representa</h3>
+
+    <div class="valores">
+      @for (item of informacion; track item.id) {
+        <article>
+          @if (item.imagen) {
+            <img class="icono-nosotros" [src]="item.imagen" [alt]="item.titulo" />
+          } @else {
+            <span class="icono-nosotros icono-texto">✓</span>
+          }
+
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.descripcion }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
